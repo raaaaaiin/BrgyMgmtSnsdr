@@ -173,6 +173,9 @@ if ($_SERVER["REQUEST_METHOD"]== "POST"){
  if ($_SERVER["REQUEST_METHOD"]== "POST"){
 $res_height=$_POST["res_height"];
         }
+        if ($_SERVER["REQUEST_METHOD"]== "POST"){
+$res_age=$_POST["res_age"];
+        }
 
  if ($_SERVER["REQUEST_METHOD"]== "POST"){
 $res_weight=$_POST["res_weight"];
@@ -291,7 +294,7 @@ If($rid && $res_fname  && $res_lname  && $res_gender && $res_bdate && $res_civil
      }
     
         $query=mysqli_query($db,"INSERT INTO resident_detail(res_ID,res_Img, 
-res_fName, res_mName,res_lName,suffix_ID, gender_ID, res_Bday, marital_ID,religion_ID,res_Height,res_Weight, occuStat_ID,occupation_ID,country_ID,Status) VALUES('$rid','$file','$res_fname','$res_mname','$res_lname','$res_suffix','$res_gender','$res_bdate','$res_civilstatus','$res_religion','$res_height', '$res_weight','$res_occupationstatus','$res_occupation','$res_citizenship','Active') ");
+res_fName, res_mName,res_lName,suffix_ID, gender_ID, res_Bday, marital_ID,religion_ID,res_Height,res_Weight, occuStat_ID,occupation_ID,country_ID,Status,res_Age) VALUES('$rid','$file','$res_fname','$res_mname','$res_lname','$res_suffix','$res_gender','$res_bdate','$res_civilstatus','$res_religion','$res_height', '$res_weight','$res_occupationstatus','$res_occupation','$res_citizenship','Active','$res_age') ");
     echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
     
     
@@ -472,7 +475,7 @@ div.upload input {
 
 <div class="form-group clm-4">
     <label for="res_age">Age*</label>
-    <input type="number" readonly maxlength="3" class="form-control" id="res_age" placeholder="Age" >
+    <input type="number" readonly maxlength="3" class="form-control" id="res_age" name="res_age" placeholder="Age" >
   </div>
           
           

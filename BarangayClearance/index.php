@@ -73,39 +73,9 @@ else{
         }
         else{
 
-                  if($var_forms=="Barangay Clearance"){
-                    header("Location:Clearances/BarangayClearance.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
-                  }
-                  else if($var_forms=="Building Permit" || $var_forms=="Barangay Building Permit" ){
-                    header("Location:Creator/CreateBuildingPermit.php?res_ID=$var_id&or=$var_or&ctc=$var_crc");
-                  }
-                  else if($var_forms=="Barangay Business Permit" || $var_forms=="Business Permit"){
-
-                    header("Location:Creator/CreateBusinessPermit.php?res_ID=$var_id&or=$var_or&ctc=$var_crc");
-                  }
-                  else if($var_forms=="Certificate of Indigency" || $var_forms=="Indigency"){
+                  if($var_forms=="Certificate of Indigency" || $var_forms=="Indigency"){
                     header("Location:Clearances/CertificateOfIndigency.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
                   }
-                  else if($var_forms=="Barangay Logging" || $var_forms=="Logging Permit" ||$var_forms=="Logging" || $var_forms=="Tree Cutting" || $var_forms=="Cutting Trees"){
-                    header("Location:Clearances/CuttingTrees.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
-                  }
-                  else if($var_forms=="Electrical Permit" || $var_forms=="Barangay Electrical Permit"){
-                    header("Location:Clearances/ElectricalPermit.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
-                  }
-                  else if($var_forms=="Barangay Fencing" || $var_forms=="Fencing" || $var_forms=="Fencing Permit" || $var_forms=="Barangay Fencing Permit"){
-                    header("Location:Creator/CreateFencingPermit.php?res_ID=$var_id&or=$var_or&ctc=$var_crc");
-                  }
-                  else if($var_forms=="Working Permit" || $var_forms=="Barangay Working Permit"){
-                    header("Location:Creator/CreateWorkingPermit.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
-                  }
-                  else if($var_forms=="Film Making" || $var_forms=="Film Making Permit" || $var_forms=="Shooting Permit"){
-                    header("Location:Creator/CreateFilmMakingPermit.php?res_ID=$var_id&or=$var_or&crc=$var_crc");
-                  }
-                  else if($var_forms=="Barangay Transient Information" || $var_forms=="Transient Information" || $var_forms=="Barangay Transient"){
-                    header("Location:Creator/CreateTransientInformation.php?or=$var_or&ctc=$var_crc");
-                  }
-
-
                   else{$s3 = "template not available!! ";}
               }
 
@@ -120,27 +90,17 @@ else{
     <meta charset="utf-8">
     <title>Forms and Clearances</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
   </head>
   <body>
 
     <div ng-app="app" ng-controller="ctrl" class="wrapper">
-      <nav style="background: #14aa6c">
-        <div class="logo">Forms and Clearances&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
-        <ul>
-          <strong><li><a style="text-decoration: none" href="inputLogo.php">Input Logo</a></li>
-          <li><a style="text-decoration: none" href="filter.php">Logs</a></li>
-          <li><a style="text-decoration: none" href="setter.php">Set-up Barangay Address</a></li>
-          <li class="dd">
-            </strong>
-        </ul>
-      </nav>
+      
 
-      <section class="sec1">
-                      <div class="qwe col-md-14">
+      <section class="">
+                      <div class="">
 
-                        <div class="input-container1">
-                          <div class="mb_names borderNow toCenterDiv">
+                        <div class="">
+                          <div class="">
                             <center><h2>PERMIT | CLEARANCE</h2></center>
                             <div class="mb_names_holder">
                                 <div class="intro-text text-right">
@@ -155,6 +115,7 @@ else{
                                       <th colspan="10"><h3>Results</h3></th>
                                     </tr>
                                     <tr>
+                                    <br>
                                       <!-- <th>ID</th> -->
                                       <th>First Name</th>
                                       <th>Middle Name</th>

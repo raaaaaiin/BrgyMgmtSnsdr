@@ -38,6 +38,7 @@ $sqlget_info = "SELECT * FROM resident_detail
                   while($row = mysqli_fetch_assoc($result_info)){
                     $houseNo= $row['address_Unit_Room_Floor_num'];
                     $first= $row['res_fName'];
+                    $age= $row['res_Age'];
                     $middleName = $row['res_mName'];
                     $lastName = $row['res_lName'];
                     $civilStatus = $row['marital_Name'];
@@ -334,8 +335,7 @@ if($resultcheckNow > 0){
 }
 ?>
 <?php
-$ap = date_default_timezone_set('Asia/Manila');
-date_default_timezone_get($ap);
+date_default_timezone_set('Asia/Manila');
 $datedate = date('Y-m-d H:i:s');
 
 
@@ -385,8 +385,8 @@ $sqlsli = "INSERT INTO form_release (res_ID, form_ID, purpose_ID, release_date)
       </div>
       <div class="header">
         Republic of the Philippines<br/>
-        PROVINCE OF <?php echo $province_disp;?><br/>
-        MUNICIPALITY OF <?php echo $citymun_disp;?><br/>
+        Province of <?php echo $province_disp;?><br/>
+        Municipality of <?php echo $citymun_disp;?><br/>
         <span id="name-input">Barangay <?php echo $head_brgy_Name;?></span><br>
       </div>
       <div class="header tag">
@@ -396,95 +396,26 @@ $sqlsli = "INSERT INTO form_release (res_ID, form_ID, purpose_ID, release_date)
         CERTIFICATE OF INDIGENCY
       </div>
         <div class="c-wrapper">
-          <div class="officials center">
-            <div class="names">
-                <br>
-                <span id="name-input"><?php echo $capfName." ".$capmInitial."."." ".$caplName;?></span><br>
-            </div>
-            <div class="posi">
-                Punong Barangay
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $pNcfName." ".$pNcmInitial."."." ".$pNclName;?></span><br>
-            </div>
-            <div class="posi">
-                Peace and Order<br>
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $wfyfName." ".$wfymInitial."."." ".$wfylName;?></span><br>
-            </div>
-            <div class="posi">
-                Women, Family, & Youth Sports Development<br>
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $heafName." ".$heamInitial."."." ".$healName;?></span><br>
-            </div>
-            <div class="posi">
-                Health and Education<br>
-            </div>
-            <br>
-            <!-- <div class="names">
-                <span id="name-input"><?php echo $wamfName." ".$wamInitial."."." ".$wamlName;?></span><br>
-            </div>
-            <div class="posi">
-                Ways and Means<br>
-            </div>
-            <br> -->
-            <div class="names">
-                <span id="name-input"><?php echo $agrifName." ".$agrimInitial."."." ".$agrilName;?></span><br>
-            </div>
-            <div class="posi">
-                Agricultural and Environmental Protection<br>
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $aprofName." ".$apromInitial."."." ".$aprolName;?></span><br>
-            </div>
-            <div class="posi">
-                Appropriation<br>
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $infrafName." ".$inframInitial."."." ".$infralName;?></span><br>
-            </div>
-            <div class="posi">
-                Infrastructure<br>
-            </div>
-            <br>
-            <span id="name-input"><?php echo $secfName." ".$secmInitial."."." ".$seclName;?></span><br>
-            <div class="posi">
-                Secretary<br>
-            </div>
-            <br>
-            <div class="names">
-                <span id="name-input"><?php echo $tresfName." ".$tresmInitial."."." ".$treslName;?></span><br>
-            </div>
-            <div class="posi">
-                Treasurer
-            </div>
-          </div>
+          
           <div class="content">
             <div id="par">
               <br><br>To whom it may concern:<br><br>
-              &emsp;&emsp;&emsp;This is to certify that Mr. / Ms. / Mrs.
+             This is to certify that Mr. / Ms. / Mrs.
               <span id="name-input"><?php echo $first." ".$middleName." ".$lastName; ?></span>,
-              <span id="name-input"><?php echo "AGE";?></span> years old <span id="name-input"><?php echo $civilStatus;?></span>
+              <span id="name-input"><?php echo $age."";?></span> years old <span id="name-input"><?php echo $civilStatus;?></span>
               and residing at <span id="name-input"><?php echo $houseNo." ".$street_Name.","." "."phase".$phase_No." ".$subd_Name;?></span>
               <span id="name-input"><?php echo $head_brgy_Name." ".$citymun_disp.","." ".$province_disp;?></span>
               is known to be a person of good moral character and law abiding citizen.
               <br><br>
 
-              &emsp;&emsp;&emsp;Certify further that he / she is one among our indigent citizen without source of income or scarce income.
+             Certify further that he / she is one among our indigent citizen without source of income or scarce income.
             <br><br>
 
-              &emsp;&emsp;&emsp;Issued this <span id="name-input"><?php echo $datedate?></span> at <span id="name-input"><?php echo $head_brgy_Name." ".$citymun_disp.","." ".$province_disp;?></span>.
+              Issued this <span id="name-input"><?php echo $datedate?></span> at <span id="name-input"><?php echo $head_brgy_Name." ".$citymun_disp.","." ".$province_disp;?></span>.
 
             </div>
               <br><br><br>
-              <div class="ccon">
+              <div class="ccon" style="float: right;">
                 <div class="puno">
                   <span id="name-input"><?php echo $capfName." ".$capmInitial."."." ".$caplName;?></span><br>
                   &emsp;PUNONG BARANGAY
